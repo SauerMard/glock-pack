@@ -1,0 +1,11 @@
+@glock21_name=G21 Pistol
+@glock21_desc=The classic trend-setter, now in .45 ACP. Boasting a devilish 13 rounds, it's a force to be reckoned with, provided you can handle it. Comes with space to mount a red dot.
+@glock22mos_name=G22 MOS Pistol
+@glock22mos_desc=The G22, now with mounting space for a dot. Happy hunting.
+@glock44_name=G44 Pistol
+@glock44_desc=A training pistol through and through. I have no clue why you'd want this.
+@glock18_name=G18 Pistol
+@glock18_desc=The fully automatic (1200 RPM) version of the G17 pistol. Hold it tight and be mindful of your ammo.
+
+@ammo_22LRGP_name=SG 40gr FMJ
+@ammo_22LRGP_desc=Standard .22LR small game round, 40 grain FMJ

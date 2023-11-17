@@ -1,0 +1,303 @@
+<Equipment>
+
+<Bind eqp="G21 Pistol GP">
+		<to name="CIA"/>
+
+		<to name="45FMJM1911_1911 Pistol"/>
+		<to name="45JHP185GR_Pistol"/>
+		<to name="45JHP160GR_Pistol"/>
+
+		<to name="IronSights_PistolCustomizable"/>
+        <to name="RedDot_Pistol"/>
+	</Bind>
+	<Firearm name="G21 Pistol GP" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@glock21_name"
+			description="@glock21_desc"
+			img="data/models/weapons/g22_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g2240.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g2240.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="13"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1300"
+			reloadEmptyTime="1700"
+			changeInTime="750"
+			changeOutTime="900"
+			readyTime="95"
+			guardTime="50"
+
+			accuracyStart="125"
+			accuracyEnd="60"
+			accuracyStartDist="7"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="CIA_HKDoubleTap45" rangeMeters="4"/>
+			<AttackType name="CIA_HKControlledPair45" rangeMeters="8"/>
+			<AttackType name="CIA_HKPistolAimedFire45" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong45" rangeMeters="33"/>
+			<AttackType name="Rangers_PistolAimedFireLong45XX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="1911_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+<Bind eqp="G22 Pistol GP">
+		<to name="CIA"/>
+
+		<to name="40JHP180GR_G2240 Pistol"/>
+		<to name="40FMJ180GR_G2240 Pistol"/>
+		<to name="40JHP165GR_G2240 Pistol"/>
+
+		<to name="IronSights_PistolCustomizable"/>
+        <to name="RedDot_Pistol"/>
+	</Bind>
+	<Firearm name="G22 Pistol GP" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@glock22mos_name"
+			description="@glock22mos_desc"
+			img="data/models/weapons/g22_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g2240.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g2240.dds" skipGOSSAO="true"/>
+
+				<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1300"
+			reloadEmptyTime="1700"
+			changeInTime="750"
+			changeOutTime="900"
+			readyTime="95"
+			guardTime="50"
+
+			accuracyStart="125"
+			accuracyEnd="60"
+			accuracyStartDist="7"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40sw_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Rangers_DoubleTap9mil" rangeMeters="5"/>
+			<AttackType name="Rangers_ControlledPair9mil" rangeMeters="10"/>
+			<AttackType name="Rangers_PistolAimedFire9mil" rangeMeters="16"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="29"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g22_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+    <Bind eqp="G44 Pistol GP">
+		<to name="CIA"/>
+
+		<to name="22LR_GP"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G44 Pistol GP" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@glock44_name"
+			description="@glock44_desc"
+			img="data/models/weapons/g19_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g19.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g19.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="10"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1100"
+			reloadEmptyTime="1450"
+			changeInTime="700"
+			changeOutTime="865"
+			readyTime="85"
+			guardTime="50"
+
+			accuracyStart="120"
+			accuracyEnd="70"
+			accuracyStartDist="5"
+			accuracyEndDist="30"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_22lr_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="CIA_CloseRangeDispatch" rangeMeters="2"/>
+			<AttackType name="Rangers_DoubleTap9mil" rangeMeters="8"/>
+			<AttackType name="Rangers_PistolAimedFire9mil" rangeMeters="20"/>
+			<AttackType name="Rangers_PistolAimedFireLongM9Sup" rangeMeters="25"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="ppk_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+    <Bind eqp="G18 Pistol GP">
+		<to name="CIA"/>
+
+		<to name="919FMJM1152_GP"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="G18 Pistol GP" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
+			tooltip="@glock18_name"
+			description="@glock18_desc"
+			img="data/models/weapons/g22_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-1.2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-1"/>
+		<RenderObject3D model="data/models/weapons/g2240.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/g2240.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="17"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1200"
+			reloadEmptyTime="1600"
+			changeInTime="700"
+			changeOutTime="900"
+			readyTime="90"
+			guardTime="50"
+
+			accuracyStart="125"
+			accuracyEnd="65"
+			accuracyStartDist="7"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="GP_G18_AutoFire" rangeMeters="8"/>
+			<AttackType name="Rangers_PistolAimedFire9mil" rangeMeters="17"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="25"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="g17_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+</Equipment>

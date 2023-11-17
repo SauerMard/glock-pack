@@ -1,0 +1,14 @@
+<FirearmAttackTypes>
+    <AttackType name="GP_G18_AutoFire">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			minShots="4"
+			maxShots="18"
+			resetTime="150"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="3"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+</FirearmAttackTypes>

@@ -15,21 +15,4 @@
 			<ArmorPenetration start="1" end="1" startDist="0" endDist="100"/>
 		</Params>
     </Ammo>
-
-	<Ammo name="919FMJM1152_GP"
-			tooltip="@ammo_919FMJM1152_name"
-			description="@ammo_919FMJM1152_desc"
-			img="data/models/weapons/attachments/m1152_ammo_ui.dds"
-		>
-
-		<Params	roundsPerSecond="20"
-				audibleSoundRadius="50"
-				physicsImpactForce="2.0"
-				damageType="0"
-				silenced="0">
-			<Damage start="21" end="19" startDist="0" endDist="30"/>
-			<CriticalChancePercent start="35" end="20" startDist="0" endDist="30"/>
-			<ArmorPenetration start="4" end="2" startDist="0" endDist="100"/>
-		</Params>
-	</Ammo>
 </Equipment>

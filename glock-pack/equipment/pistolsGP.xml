@@ -231,7 +231,9 @@
     <Bind eqp="G18 Pistol GP">
 		<to name="CIA"/>
 
-		<to name="919FMJM1152_GP"/>
+		<to name="919FMJM882_Handgun"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
 
 		<to name="IronSights_Pistol"/>
 	</Bind>
@@ -267,7 +269,7 @@
 
 		<Params
 			caliberInfoText="@firearm_caliber_9x19_name"
-			operationInfoText="@firearm_operation_semiauto_name"
+			operationInfoText="@firearm_operation_semifull_name"
 			ejectingShellEntity="BulletCasingSmall"
 			magazineEntity="pm63_mag"
 			ai_rangeMin="1.0"
@@ -300,4 +302,80 @@
 			<Empty name="gen_empty"/>
 		</Sounds>
 	</Firearm>
+
+	<Bind eqp="M93R Pistol">
+		<to name="CIA"/>
+
+		<to name="919FMJM882_Handgun"/>
+		<to name="919FMJM1152_Handgun"/>
+		<to name="919JHPM1153_Handgun"/>
+
+		<to name="IronSights_Pistol"/>
+	</Bind>
+	<Firearm name="M93R Pistol" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="0"
+			tooltip="@m93r_name"
+			description="@m93r_desc"
+			img="data/models/weapons/m9_ui.dds"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/m9.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/m9.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="15"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1400"
+			reloadEmptyTime="1800"
+			changeInTime="800"
+			changeOutTime="1000"
+			readyTime="100"
+			guardTime="50"
+
+			accuracyStart="90"
+			accuracyEnd="85"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semi3rdburst_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="15.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="GP_93R_AutoFire" rangeMeters="6"/>
+			<AttackType name="Rangers_ControlledPair9mil" rangeMeters="8"/>
+			<AttackType name="Rangers_PistolAimedFire9mil" rangeMeters="15"/>
+			<AttackType name="Rangers_PistolAimedFireLong9mil" rangeMeters="30"/>
+			<AttackType name="Rangers_PistolAimedFireLong9milXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="m9_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+	
 </Equipment>

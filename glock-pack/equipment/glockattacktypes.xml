@@ -3,9 +3,24 @@
 		<ModifiableParams
 			minAimTime="200"
 			maxAimTime="200"
+			roundsPerSecondOverride="20"
 			minShots="4"
 			maxShots="18"
 			resetTime="150"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="3"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="GP_93R_AutoFire">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			roundsPerSecondOverride="20"
+			minShots="3"
+			maxShots="3"
+			resetTime="300"
 			accuracyAdd="-20"
 			followupShotAccuracyAdd="3"
 			critChanceAdd="0"

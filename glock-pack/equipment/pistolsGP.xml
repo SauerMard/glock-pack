@@ -7,8 +7,7 @@
 		<to name="45JHP185GR_Pistol"/>
 		<to name="45JHP160GR_Pistol"/>
 
-		<to name="IronSights_PistolCustomizable"/>
-        <to name="RedDot_Pistol"/>
+		<to name="IronSights_Pistol"/>
 	</Bind>
 	<Firearm name="G21 Pistol GP" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="2"
 			tooltip="@glock21_name"

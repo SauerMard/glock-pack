@@ -27,7 +27,7 @@
 			roundsPerMagazine="50"
 			closedBolt="0"
 
-            projectilesPerMagazine="5"
+            projectilesPerMagazine="10"
 
 			cyclicReload="0"
 			reloadTime="2700"
@@ -132,7 +132,7 @@
 				<SuppressEffect amount="30"/>
 			</EffectRange>
 
-			<EffectRange radiusMeters="5">
+			<EffectRange radiusMeters="3">
 				<StunEffect chancePercent="100" innerRangeTimeMSec="1000" outerRangeTimeMSec="300"/>
 				<ScatterEffect chancePercent="100"/>
 			</EffectRange>

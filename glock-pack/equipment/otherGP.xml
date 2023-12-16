@@ -217,4 +217,191 @@
 		</Sounds>
 	</Firearm>
 
+    <Bind eqp="M320GP_Incendiary">
+		<to name="BlackOps"/>
+
+		<to name="338_SniperRifle"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="M320GP_Incendiary" inventoryBinding="SupportGear1" category="rifle" unlockCost="10"
+			tooltip="M320 Incendiary"
+			description="@firearm_M320cia_desc"
+			img="data/models/weapons/m320_ui.dds"
+			animationSet="rifle"
+		>
+
+		<RenderObject3D model="data/models/weapons/m320.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m320.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-6" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2" />
+		<ModifiableParams
+			projectilesPerMagazine="6"
+
+			reloadTime="3000"
+			reloadEmptyTime="3000"
+			changeInTime="1400"
+			changeOutTime="500"
+			readyTime="600"
+			guardTime="350"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40mm_name"
+			operationInfoText="@firearm_operation_singleshot_name"
+			ai_rangeMin="12.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="80.0"
+			ai_stopWhenShooting="true"
+		/>
+
+
+		<AttackTypesProjectile>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="15"/>
+			<AttackType name="RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+
+		<Projectile
+			bodyTemplate="M203GrenadeBody"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="frag_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="50000.0"
+			maxVelocity="50000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2.5"
+			accuracyPercent="75"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="Molotov_Explosion"
+				entity1="scorch_mark_molotov_central"
+				randRotation1="true"
+				entity2="fire_molotov"
+				deleteAfterMS2="15000"
+				entity3="Light_FireLarge"
+				deleteAfterMS3="15000"
+			/>
+
+			<Shrapnel projectileSource="Extra_MolotovShrapnel" min="4" max="6" spreadRadius="2.0" />
+
+			<EffectRange radiusMeters="1.0">
+				<DamageEffect chancePercent="100" damage="45" damageType="0"  armorPenetration="0"/>
+				<FireEffect durationMSec="8000"/>
+				<DOTEffect durationMSec="15000" dps="10.0"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="2.0">
+				<!-- <StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/> -->
+				<ScatterEffect chancePercent="100"/>
+				<SuppressEffect amount="30"/>
+				<!-- <SmokeEffect durationMSec="1030" /> -->
+			</EffectRange>
+
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+    <Bind eqp="Clusterfrag_GP" to="CIA"/>
+	<Grenade name="Clusterfrag_GP" inventoryBinding="UtilityPouch"
+			quantity="1"
+
+			tooltip="Ninefrag"
+			description="@grenade_frag_desc"
+			img="data/models/equipment/frag_grenade_ui.dds"
+			movie="data/movies/frag.ogv"
+
+			animationSet="grenade"
+			soundUse="grenade_use"
+			soundUseVoice="VOX_GEAR_FRAG"
+		>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
+		<ConcealmentModifier add="-0.5"/>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="1000"
+			throwTimeCorner="1400"
+		/>
+
+		<Projectile
+			bodyTemplate="FragGrenade"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+
+			soundExplosion="frag_expl"
+			soundHitFloor="grenade_hit_floor"
+
+			friendlyFire="true"
+			triggerOnImpact="false"
+			triggerTimeAfterTargetHitMsec="1000"
+
+			physicsDetonationForce="60"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="30">
+
+			<!-- spawn these when exploding -->
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000"
+				anim2D="">
+			</FX>
+
+            <Shrapnel projectileSource="Frag Grenade Single" min="9" max="9" spreadRadius="2.0" />
+
+			<EffectRange radiusMeters="1.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"  armorPenetration="0"/>
+				<ScatterEffect chancePercent="100" armorPenetration="3"/>
+				<SuppressEffect amount="20"/>
+				<SmokeEffect durationMSec="700" />
+			</EffectRange>
+			<EffectRange radiusMeters="2.0">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="3"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+			<EffectRange radiusMeters="4.2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="800" outerRangeTimeMSec="500"/>
+				<DamageEffect chancePercent="50" damage="20" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="0"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+		</Projectile>
+	</Grenade>
+
 </Equipment>

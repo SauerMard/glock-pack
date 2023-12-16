@@ -9,10 +9,26 @@
 
 	<wp
 		type="GRENADE_LAUNCHER"
+		equipment="M320GP_Incendiary"
+		ui_prefix="data/textures/gui_ingame/waypoints/grenade_launcher"
+		ttip="@menu_game_grenadelaunch_ttip"
+		ttip_disabled="@menu_generic_cannot_use"
+		ttip_empty="@menu_game_grenadelaunch_none_ttip"/>
+
+	<wp
+		type="GRENADE_LAUNCHER"
 		equipment="M320GP_Stinger"
 		ui_prefix="data/textures/gui_ingame/waypoints/grenade_launcher"
 		ttip="@menu_game_grenadelaunch_ttip"
 		ttip_disabled="@menu_generic_cannot_use"
 		ttip_empty="@menu_game_grenadelaunch_none_ttip"/>
+
+	<wp
+		type="THROW_GRENADE"
+		equipment="Clusterfrag_GP"
+		ui_prefix="data/textures/gui_ingame/waypoints/frag"
+		ttip="@menu_game_fg_ttip"
+		ttip_disabled="@menu_generic_cannot_use"
+		ttip_empty="@menu_game_fg_none_ttip"/>
 
 </ActionWaypoints>

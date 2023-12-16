@@ -1,0 +1,220 @@
+<Equipment>
+	<Bind eqp="M320GP_Flashbang">
+		<to name="BlackOps"/>
+
+		<to name="338_SniperRifle"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="M320GP_Flashbang" inventoryBinding="SupportGear1" category="rifle" unlockCost="10"
+			tooltip="M320 Flashbang"
+			description="@firearm_M320cia_desc"
+			img="data/models/weapons/m320_ui.dds"
+			animationSet="rifle"
+		>
+
+		<RenderObject3D model="data/models/weapons/m320.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m320.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-6" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2" />
+		<ModifiableParams
+			projectilesPerMagazine="6"
+
+			reloadTime="3000"
+			reloadEmptyTime="3000"
+			changeInTime="1400"
+			changeOutTime="500"
+			readyTime="600"
+			guardTime="350"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40mm_name"
+			operationInfoText="@firearm_operation_singleshot_name"
+			ai_rangeMin="12.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="80.0"
+			ai_stopWhenShooting="true"
+		/>
+
+
+		<AttackTypesProjectile>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="15"/>
+			<AttackType name="RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+
+		<Projectile
+			bodyTemplate="M203GrenadeBody"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="flash_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="50000.0"
+			maxVelocity="50000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2.5"
+			accuracyPercent="75"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="Flashbang"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="3500" outerRangeTimeMSec="3500"/>
+				<DamageEffect chancePercent="100" damage="1" damageType="1"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="3.5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="3500" outerRangeTimeMSec="1750"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+    <Bind eqp="M320GP_Stinger">
+		<to name="BlackOps"/>
+
+		<to name="338_SniperRifle"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="M320GP_Stinger" inventoryBinding="SupportGear1" category="rifle" unlockCost="10"
+			tooltip="M320 Stinger"
+			description="@firearm_M320cia_desc"
+			img="data/models/weapons/m320_ui.dds"
+			animationSet="rifle"
+		>
+
+		<RenderObject3D model="data/models/weapons/m320.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m320.dds">
+			<Specular shininess="32" intensity="4.0"/>
+		</RenderObject3D>
+		<MobilityModifiers moveSpeedModifierPercent="-6" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-2" />
+		<ModifiableParams
+			projectilesPerMagazine="6"
+
+			reloadTime="3000"
+			reloadEmptyTime="3000"
+			changeInTime="1400"
+			changeOutTime="500"
+			readyTime="600"
+			guardTime="350"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40mm_name"
+			operationInfoText="@firearm_operation_singleshot_name"
+			ai_rangeMin="12.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="80.0"
+			ai_stopWhenShooting="true"
+		/>
+
+
+		<AttackTypesProjectile>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="15"/>
+			<AttackType name="RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_05" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_06" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_07" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_08" />
+		</MuzzleFlash>
+
+
+		<Projectile
+			bodyTemplate="M203GrenadeBody"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="frag_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="50000.0"
+			maxVelocity="50000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2.5"
+			accuracyPercent="75"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="Stinger"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="1" damageType="1"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<ScatterEffect chancePercent="100"/>
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1000"/>
+				<SuppressEffect amount="50"/>
+			</EffectRange>
+
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<!-- <Reload name="rifle_reld"/> -->
+			<!-- <ReloadEmpty name="rifle_reldempt"/> -->
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+</Equipment>

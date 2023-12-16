@@ -1,0 +1,29 @@
+<ActionWaypoints>
+    <wp
+		type="PLANT_EXPLOSIVES"
+		equipment="Slap Charge UPGD"
+		ui_prefix="data/textures/gui_ingame/waypoints/charge_slap"
+		ttip="@menu_game_slapcharge_ttip"
+		ttip_disabled="@menu_generic_cannot_use"
+		ttip_empty="@menu_game_slapcharge_none_ttip"/>
+
+	<wp
+		type="WAITING_FOR_DETONATION"
+		equipment="Slap Charge UPGD"
+		ui_prefix="data/textures/gui_ingame/waypoints/blow_up"
+		ttip="@menu_game_charges_detonate_ttip"/>
+
+    <wp
+		type="PLANT_EXPLOSIVES"
+		equipment="Slap Charge Kit UPGD"
+		ui_prefix="data/textures/gui_ingame/waypoints/charge_slap"
+		ttip="@menu_game_slapcharge_ttip"
+		ttip_disabled="@menu_generic_cannot_use"
+		ttip_empty="@menu_game_slapcharge_none_ttip"/>
+
+	<wp
+		type="WAITING_FOR_DETONATION"
+		equipment="Slap Charge Kit UPGD"
+		ui_prefix="data/textures/gui_ingame/waypoints/blow_up"
+		ttip="@menu_game_charges_detonate_ttip"/>
+</ActionWaypoints>

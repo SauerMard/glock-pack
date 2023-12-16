@@ -1,0 +1,115 @@
+<Equipment>
+<Bind eqp="Slap Charge Kit UPGD">
+		<to name="Rangers"/>
+		<to name="BlackOps"/>
+	</Bind>
+	<ExplosiveCharge name="Slap Charge Kit UPGD" inventoryBinding="SupportGear1"
+			quantity="3"
+
+			tooltip="@upgd_slap_charge_kit_name"
+			description="@upgd_slap_charge_desc"
+			img="data/models/equipment/slapcharge_kit_ui.dds"
+
+			animationSet="generic_device"
+			soundUse="equip_charge"
+			soundUseVoice="VOX_TRPR_GEAR_CHARGE_PLACE"
+			crouchOnUse="true"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-2" />
+		<!-- Area2 contains Area1 (should be larger than..). The effects don't stack though. -->
+		<ModifiableParams
+			changeInTime="100"
+			changeOutTime="100"
+			efficiencyPercent="100"
+			deployTime="500"
+
+			area1WidthMeters="0.75"
+			area1LengthMeters="0.5"
+			area1Damage="50"
+			area1StunTime="3000"
+
+			area2WidthMeters="1.25"
+			area2LengthMeters="2"
+			area2Damage="25"
+			area2StunTime="2000"
+
+			audibleSoundRadius="30"
+			audibleSoundRadiusForPlacing="1.0"
+			physicsDetonationForce="25"
+			damageType="2"
+		/>
+
+		<Params
+			bodyTemplate="SlapChargeBody"
+			explosionSound="expl_slap_charge">
+
+			<FX
+				particles="Slap_Charge"
+				entity1="ExplosionLight"
+				entity2="scorch_mark_slapcharge"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000"
+				>
+			</FX>
+		</Params>
+	</ExplosiveCharge>
+
+	<Bind eqp="Slap Charge UPGD">
+		<to name="Rangers"/>
+		<to name="BlackOps"/>
+		<to name="Undercover"/>
+	</Bind>
+	<ExplosiveCharge name="Slap Charge UPGD" inventoryBinding="UtilityPouch"
+			quantity="1"
+
+			tooltip="@upgd_slap_charge_name"
+			description="@upgd_slap_charge_desc"
+			img="data/models/equipment/slap_charge_ui.dds"
+
+			animationSet="generic_device"
+			soundUse="equip_charge"
+			soundUseVoice="VOX_TRPR_GEAR_CHARGE_PLACE"
+			crouchOnUse="true"
+		>
+		<RenderObject3D model="data/models/humans/attachments/backpack_slap_charge.khm" attachSlot="vest_back_right" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/backpack_slap_charge.dds"/>
+		<ConcealmentModifier add="-1"/>
+		<MobilityModifiers moveSpeedModifierPercent="-1" turnSpeedModifierPercent="0"/>
+
+		<!-- Area2 contains Area1 (should be larger than..). The effects don't stack though. -->
+		<ModifiableParams
+			changeInTime="100"
+			changeOutTime="100"
+			efficiencyPercent="100"
+			deployTime="500"
+
+			area1WidthMeters="0.75"
+			area1LengthMeters="0.5"
+			area1Damage="50"
+			area1StunTime="3000"
+
+			area2WidthMeters="1.25"
+			area2LengthMeters="2"
+			area2Damage="25"
+			area2StunTime="2000"
+
+			audibleSoundRadius="30"
+			audibleSoundRadiusForPlacing="1.0"
+			physicsDetonationForce="25"
+			damageType="2"
+		/>
+
+		<Params
+			bodyTemplate="SlapChargeBody"
+			explosionSound="expl_slap_charge">
+
+			<FX
+				particles="Slap_Charge"
+				entity1="ExplosionLight"
+				entity2="scorch_mark_slapcharge"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000">
+			</FX>
+		</Params>
+	</ExplosiveCharge>
+</Equipment>

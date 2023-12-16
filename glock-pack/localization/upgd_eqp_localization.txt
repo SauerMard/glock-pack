@@ -1,0 +1,4 @@
+@upgd_slap_charge_name=Fast Slap
+@upgd_slap_charge_desc=It's fast
+@upgd_slap_charge_kit_name=Fast Slap Kit
+@upgd_slap_charge_kit_desc=It fast

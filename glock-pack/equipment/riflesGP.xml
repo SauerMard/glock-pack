@@ -117,6 +117,8 @@
 				anim2D="">
 			</FX>
 
+			<Shrapnel projectileSource="Frag Grenade Single" min="3" max="3" spreadRadius="5.0" />
+
 			<EffectRange radiusMeters="1.7">
 				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
 				<DamageEffect chancePercent="100" damage="999" damageType="1"/>

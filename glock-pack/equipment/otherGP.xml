@@ -305,13 +305,21 @@
 
 			<Shrapnel projectileSource="Extra_MolotovShrapnel" min="4" max="6" spreadRadius="2.0" />
 
-			<EffectRange radiusMeters="1.0">
+            <EffectRange radiusMeters="0.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"  armorPenetration="0"/>
+				<ScatterEffect chancePercent="100" armorPenetration="3"/>
+				<SuppressEffect amount="20"/>
+				<SmokeEffect durationMSec="700" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="1.5">
 				<DamageEffect chancePercent="100" damage="45" damageType="0"  armorPenetration="0"/>
 				<FireEffect durationMSec="8000"/>
 				<DOTEffect durationMSec="15000" dps="10.0"/>
 			</EffectRange>
 
-			<EffectRange radiusMeters="2.0">
+			<EffectRange radiusMeters="3.0">
 				<!-- <StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/> -->
 				<ScatterEffect chancePercent="100"/>
 				<SuppressEffect amount="30"/>
@@ -380,7 +388,7 @@
 				anim2D="">
 			</FX>
 
-            <Shrapnel projectileSource="Frag Grenade Single" min="9" max="9" spreadRadius="2.0" />
+            <Shrapnel projectileSource="Frag Grenade Single" min="9" max="9" spreadRadius="10.0" />
 
 			<EffectRange radiusMeters="1.7">
 				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
